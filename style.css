@@ -1,85 +1,213 @@
-/* Achtung: Dieser Style wurde (teilweise) mit Hilfe von KI-Tools generiert (Copilot Agent).<br/> 
-Bitte sorgfältig prüfen und vor dem produktiven Einsatz testen! 
-OK Lab Köln */
+* {
+	box-sizing: border-box;	
+}
 
-.centerDIV {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    width: fit-content; /* Optional: Adjust width as needed */
+html,
+body {
+	margin: 0;
+	min-height: 100%;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+	background: #f4f7f5;
+	color: #17352d;
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
 }
 
-header {
-    background-color: #ff6f61;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+.site-header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 120px;
+	padding: 24px 140px 24px 24px;
+	background: #ffffff;
+	border-bottom: 4px solid #42D49C;
 }
 
-header img {
-    max-width: 100px;
-    margin-bottom: 10px;
+.site-header h2 {
+	margin: 0;
+	color: #17352d;
+	font-size: clamp(1.5rem, 4vw, 2.25rem);
+	text-align: center;
+}
+
+.site-logo {
+	position: absolute;
+	top: 16px;
+	right: 24px;
+	width: min(112px, 20vw);
+	height: auto;
 }
 
 .centerDIV {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	width: min(100% - 32px, 880px);
+	margin: 40px auto;
+	text-align: center;
 }
 
-h1, h2 {
-    color: #0d0c0c;
+.title-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 24px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.title-row h2 {
+	margin: 0;
 }
 
-ul li {
-    margin: 10px 0;
+.impressum-button {
+	flex: none;
+	display: grid;
+	place-items: center;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	border: 2px solid #42D49C;
+	border-radius: 50%;
+	background: #ffffff;
+	color: #17352d;
+	font: inherit;
+	font-size: 1.15rem;
+	font-weight: 700;
+	line-height: 1;
+	cursor: pointer;
 }
 
-ul li a {
-    text-decoration: none;
-    color: #007BFF;
+.impressum-button:hover {
+	background: #42D49C;
+	color: #ffffff;
 }
 
-ul li a:hover {
-    text-decoration: underline;
+.impressum-button:focus-visible,
+.impressum-close:focus-visible,
+.impressum-ok:focus-visible {
+	outline: 3px solid #17352d;
+	outline-offset: 3px;
 }
 
-code {
-    display: block;
-    background: #f9f9f9;
-    padding: 10px;
-    border-left: 4px solid #ff6f61;
-    overflow-x: auto;
+.impressum-dialog {
+	width: min(520px, calc(100% - 32px));
+	max-height: calc(100vh - 32px);
+	padding: 0;
+	border: 0;
+	border-top: 4px solid #42D49C;
+	border-radius: 8px;
+	background: #ffffff;
+	color: #17352d;
+	text-align: left;
+	overflow: auto;
 }
 
-img {
-    display: block;
-    margin: 20px auto;
-    border-radius: 8px;
+.impressum-dialog::backdrop {
+	background: rgba(23, 53, 45, 0.6);
+}
+
+.impressum-content {
+	padding: 20px 24px 24px;
+}
+
+.impressum-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.impressum-header h3 {
+	margin: 0;
+	font-size: 1.4rem;
+}
+
+.impressum-content h4 {
+	margin: 20px 0 4px;
+	font-size: 1rem;
+}
+
+.impressum-content p {
+	margin: 0;
+}
+
+.impressum-close {
+	width: 36px;
+	height: 36px;
+	border: 0;
+	border-radius: 50%;
+	background: #dfeee5;
+	color: #17352d;
+	font-size: 1.4rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.impressum-ok {
+	width: 100%;
+	margin-top: 24px;
+	padding: 12px 16px;
+	border: 0;
+	border-radius: 6px;
+	background: #42D49C;
+	color: #17352d;
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.impressum-ok:hover {
+	filter: brightness(0.95);
+}
+
+.centerDIV p {
+	margin: 0 0 28px;
+}
+
+model-viewer {
+	display: block;
+	width: min(100%, 400px);
+	height: min(72vw, 400px);
+	margin: 0 auto 16px;
+	background: #dfeee5;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid #c8d8cf;
+	margin: 32px 0;
 }
 
 footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background: #ff6f61;
-    color: white;
+	padding: 20px 16px;
+	background: #42D49C;
+	color: #ffffff;
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
+}
+
+@media (max-width: 480px) {
+	.site-header {
+		min-height: 96px;
+		padding: 20px 88px 20px 16px;
+	}
+
+	.site-logo {
+		top: 12px;
+		right: 16px;
+		width: 64px;
+	}
+
+	.impressum-button {
+		width: 36px;
+		height: 36px;
+	}
+
+	.centerDIV {
+		width: min(100% - 24px, 880px);
+		margin: 28px auto;
+	}
 }
